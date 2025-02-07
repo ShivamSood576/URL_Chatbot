@@ -56,6 +56,10 @@ This project is a **Retrieval-Augmented Generation (RAG)** system built with Fla
    ```bash
     run app.py
    ```
+## Output🙌
+
+![image](https://github.com/user-attachments/assets/50a8b12f-d3e8-4e63-bc52-830ccfd9587b)
+
 
 # API Usage
 
@@ -70,9 +74,7 @@ This project is a **Retrieval-Augmented Generation (RAG)** system built with Fla
 }
 
 
-## Output🙌
 
-![image](https://github.com/user-attachments/assets/50a8b12f-d3e8-4e63-bc52-830ccfd9587b)
 
 
 
