@@ -1,46 +1,80 @@
-# RAG-Based Question Answering API using Flask and LangChain
+
+# RAG-Based Question Answering API using Flask and LangChain 📝📚
 
 ## Overview
 
-This project is a Retrieval-Augmented Generation (RAG) system built with Flask, LangChain, FAISS, and Google's Gemini AI models. The API allows users to query a set of documents retrieved from a specified URL and receive AI-generated answers.
-
-## Features
+This project is a **Retrieval-Augmented Generation (RAG)** system built with Flask, LangChain, FAISS, and Google's Gemini AI models. The API allows users to query a set of documents retrieved from a **specified URL** and receive AI-generated answers.
+## Features 🚀
 
 - **Flask API** for handling user queries
 - **UnstructuredURLLoader** to extract data from web pages
-- **RecursiveCharacterTextSplitter** for efficient text chunking
-- **FAISS** vector store for document retrieval
-- **GoogleGenerativeAIEmbeddings** for vector representations
-- **ChatGoogleGenerativeAI** for AI-based responses
-- **Retrieval-Augmented Generation (RAG) pipeline** for improved responses
+- **Chat Interface:** Ask questions about the uploaded PDF content in a user-friendly chat interface.
+- **RAG Pipeline:** Utilizes LangChain for document splitting, embeddings creation, and retrieval.
+- **Contextual Answers:** Provides accurate answers based on the uploaded document.
+- **Conversation History:** Saves Q&A sessions with timestamps in a CSV file.
+- **Streamlit Integration:** A seamless and intuitive user experience.
+- **Google Generative AI Integration:** For generating embeddings and AI-based responses.
 
----
+## Tech Stack 🛠️
 
-## Requirements
+- **Python**: Core programming language.
+- **Streamlit**: For creating the web application interface.
+- **LangChain**: For the RAG pipeline and LLM integration.
+- **Google Generative AI**: For embeddings and chat responses.
+- **FAISS**: For vector similarity search and retrieval.
+- **Flask**: for API
 
-Ensure you have the following dependencies installed:
 
-```bash
-pip install Flask python-dotenv langchain langchain_community langchain_google_genai faiss-cpu requests
+  ## How to Run the Project 🏃‍♂️
 
-You also need a Google API key to use the GoogleGenerativeAIEmbeddings and ChatGoogleGenerativeAI models. Store it in a .env file:
+### Prerequisites
 
-GOOGLE_API_KEY=your_api_key_here
+1. **Install Python 3.8+**
+2. Install the required libraries by running:
 
-Setup
-Clone this repository:
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-pip install -r requirements.txt
-Set up environment variables:
+3. Create a `.env` file in the root directory with your **Google Generative AI credentials**:
 
-Create a .env file in the project directory
+   ```env
+   GOOGLE_API_KEY=your_google_api_key
+   ```
 
-Add the following line to the .env file:
 
-GOOGLE_API_KEY=your_api_key_here
-Run the Flask app:
+### Steps to Run
 
-python app.py
+1. Clone the repository:
+
+   ```bash
+   [git clone https://github.com/your-repo-name/pdf-chat-app.git]
+   cd RAG-based_Chatbot
+
+2. Start the application:
+
+   ```bash
+    run app.py
+   ```
+
+# API Usage
+
+## Endpoint: `/ask`
+- **Method:** `POST`
+- **Content-Type:** `application/json`
+
+### Request Body:
+```json
+{
+    "query": "What courses are available on Brainlox?"
+}
+
+
+## Output🙌
+
+![image](https://github.com/user-attachments/assets/50a8b12f-d3e8-4e63-bc52-830ccfd9587b)
+
+
+
+
+
